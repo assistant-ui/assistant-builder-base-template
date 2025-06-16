@@ -15,22 +15,17 @@ export const Assistant = () => {
 
   return (
     <AssistantRuntimeProvider runtime={runtime}>
-      <SidebarProvider>
-        <AppSidebar />
-        <SidebarInset>
-          <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
-            <SidebarTrigger />
-            <Separator orientation="vertical" className="mr-2 h-4" />
-          </header>
+     <div className="flex h-screen w-screen">
+
+      <div className="flex-1 overflow-hidden">
+        <div className="h-full flex flex-col">
           <div className="flex-1 overflow-hidden">
-            <div className="h-full flex flex-col">
-              <div className="flex-1 overflow-hidden">
-                <Thread />
-              </div>
-            </div>
+            <Thread />
           </div>
-        </SidebarInset>
-      </SidebarProvider>
+        </div>
+      </div>
+
+     </div>
     </AssistantRuntimeProvider>
   );
 };
